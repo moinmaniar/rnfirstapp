@@ -211,6 +211,11 @@ export default App = () => {
 
   const printValueInConsole = (receiveInputFromInputItems, x) => {
     //  console.log(x)  
+
+    if(receiveInputFromInputItems.length === 0 ){
+      return null;
+    }
+    else{
     updatedArrayGoal([
       ...currentGoal,
       { id: Math.random().toString(), value: receiveInputFromInputItems }
@@ -218,7 +223,7 @@ export default App = () => {
     // added gotGoal which is our "string"
 
     setIsVisible(false);
-
+  }
   };
 
   const deleteId = (goalId) => {
